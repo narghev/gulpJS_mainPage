@@ -92,7 +92,34 @@ li {
     background: linear-gradient(to right, rgba(246,250,253,1) 0%,rgba(221,226,233,1) 6%,rgba(246,250,253,1) 15%,rgba(246,250,253,1) 42%,rgba(230, 230, 230, 1) 42%,rgba(246,250,253,1) 45%,rgba(246,250,253,1) 53%,rgba(230, 230, 230, 1) 56%,rgba(246,250,253,1) 56%, rgba(246,250,253,1) 85%,rgba(221,226,233,1) 94%,rgba(246,250,253,1) 100%);
 }
 
-@media (max-width: 900px) {
+.container .text {
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 32px;
+  font-weight: 100;
+}
+
+.container .button {
+  margin-top: 40px;
+  background-color: #fff;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  border: 1px solid white;
+  color: #CF4647;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+@media screen and (max-width: 900px) {
   .container h1 {
     padding-top: 60px;
     font-size: 32px;
@@ -113,18 +140,24 @@ li {
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .container img {
     display: none;
   }
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
   .container .computer {
     font-size: 13pt;
     overflow-x: auto;
   }
   .container .computer span {
     overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container .button {
+    width: 90%;
   }
 }
