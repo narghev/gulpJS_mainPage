@@ -6,7 +6,6 @@ header {
   background-color: #CF4647;
   color: white;
   width: 100%;
-  height: 110vh;
   padding-top: 20px;
 }
 
@@ -105,6 +104,7 @@ li {
   margin-top: 40px;
   background-color: #fff;
   height: 40px;
+  margin-bottom: 40px;
   line-height: 38px;
   border-radius: 3px;
   font-size: 15px;
@@ -117,6 +117,59 @@ li {
   padding-right: 30px;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.features {
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  text-align: center;
+}
+
+.features img {
+  margin-bottom: 30px;
+}
+
+.features span {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, .5);
+  font-size: 17px;
+  line-height: 32px;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.features div {
+  width: 320px;
+  margin-right: 20px;
+}
+
+.browser {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.atom {
+  margin-right: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -159,5 +212,18 @@ li {
 @media screen and (max-width: 440px) {
   .container .button {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .features {
+    width: 100%;
+    flex-direction: column;
+  }
+  .features div {
+    margin: auto;
+  }
+  .browser span {
+    width: 100%;
   }
 }
