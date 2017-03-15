@@ -70,5 +70,62 @@
         <span>By enforcing strict guidelines, we ensure our plugins stay simple and work as expected.</span>
       </div>
     </div>
+    <div class="code">
+      <div class="editor">
+        <div class="editorHeader">
+          <div style="background-color: red; margin-left: 10px;"></div>
+          <div style="background-color: yellow;"></div>
+          <div style="background-color: green;"></div>
+          <span>gulpfile.js</span>
+        </div>
+        <div class="editorScreen">
+          <span style="color: rgba(195,154,78,1);">var</span>
+           gulp =
+          <span style="color: rgba(112,75,40,1);">require</span>(<span style="color: rgba(130 ,140,91,1);">'gulp'</span>);
+          <br>
+          <span style="color: rgba(195,154,78,1);">var</span>
+           pug =
+          <span style="color: rgba(112,75,40,1);">require</span>(<span style="color: rgba(130 ,140,91,1);">'gulp-pug'</span>);
+          <br>
+          <span style="color: rgba(195,154,78,1);">var</span>
+           less =
+          <span style="color: rgba(112,75,40,1);">require</span>(<span style="color: rgba(130 ,140,91,1);">'gulp-less'</span>);
+          <br>
+          <span style="color: rgba(195,154,78,1);">var</span>
+           minifyCSS =
+          <span style="color: rgba(112,75,40,1);">require</span>(<span style="color: rgba(130 ,140,91,1);">'gulp-csso'</span>);
+          <br>
+          <br>
+          gulp.task(<span style="color: rgba(130 ,140,91,1);">'html'</span>, <span style="color: rgba(195,154,78,1);">function</span>(){
+          <br>
+          <span style="color: rgba(195,154,78,1);">&nbsp;&nbsp;return </span>gulp.src(<span style="color: rgba(130 ,140,91,1);">'client/templates/*.pug'</span>)
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;.pipe(pug())
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;.pipe(gulp.dest(<span style="color: rgba(130 ,140,91,1);">'build/html'</span>))
+          <br>
+          });
+          <br>
+          <br>
+          gulp.task(<span style="color: rgba(130 ,140,91,1);">'html'</span>, <span style="color: rgba(195,154,78,1);">function</span>(){
+          <br>
+          <span style="color: rgba(195,154,78,1);">&nbsp;&nbsp;return </span>gulp.src(<span style="color: rgba(130 ,140,91,1);">'client/templates/*.less'</span>)
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;.pipe(pug())
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;.pipe(minifyCSS())
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;.pipe(gulp.dest(<span style="color: rgba(130 ,140,91,1);">'build/css'</span>))
+          <br>
+          });
+          <br>
+          <br>
+          gulp.task(<span style="color: rgba(130 ,140,91,1);">'default'</span>, [ <span style="color: rgba(130 ,140,91,1);">'html'</span>, <span style="color: rgba(130 ,140,91,1);">'css'</span> ]);
+          <br>
+          <br>
+        </div>
+        <div class="editorCode"></div>
+      </div>
+    </div>
   </body>
 </html>

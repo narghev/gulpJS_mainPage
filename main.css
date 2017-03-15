@@ -149,11 +149,9 @@ li {
 
 .features div {
   width: 320px;
-  margin-right: 20px;
 }
 
 .browser {
-  margin-left: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,10 +164,59 @@ li {
 }
 
 .atom {
-  margin-right: 7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.code {
+  background-color: #3A3E64;
+  width: 100%;
+  margin: 0;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.editor {
+  margin-left: 92.5px;
+  margin-right: 92.5px;
+  color: rgba(255, 255, 255, 0.6);
+  word-break: normal;
+}
+
+.editorHeader {
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+  align-items: center;
+  background-color: #E5E4E4;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.editorHeader div {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-left: 2px;
+}
+
+.editorHeader span {
+  color: #141414;
+  font-family: Menlo, 'DejaVu Sans Mono', 'Lucida Console', monospace;
+  font-size: 12pt;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.editorScreen {
+  background-color: #141414;
+  overflow-x: auto;
+  border-radius: 0 0 5px 5px;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-family: Menlo, 'DejaVu Sans Mono', 'Lucida Console', monospace;
+  font-size: 14pt;
 }
 
 @media screen and (max-width: 900px) {
@@ -206,6 +253,9 @@ li {
   }
   .container .computer span {
     overflow-x: auto;
+  }
+  .editor {
+    font-size: 13px;
   }
 }
 
